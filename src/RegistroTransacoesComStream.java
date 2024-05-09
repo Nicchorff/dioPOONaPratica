@@ -34,7 +34,7 @@ public class RegistroTransacoesComStream {
                 // Mapeia cada transação para uma string formatada:
                 .map(transacao -> transacao.getTipo() + " de " + transacao.getValor())
                 // Coleta os elementos do fluxo em uma lista:
-                .collect(Collectors.toList())
+                .toList()
                 // Para cada elemento da lista, imprime no console:
                 .forEach(System.out::println);
 
